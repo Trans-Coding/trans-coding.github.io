@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <style>
 	body{
-		font-family: 'Nunito', sans-serif;
+		font-family: 'Nunito', sans-serif;width: 100%;
+		margin: 80px auto;
+		background-color: white;
 	}
 	.job-image{
 		width: 100%;
@@ -75,11 +77,11 @@
 			</div>
 		</nav>
 		
-		<div class="section_holder">My name is Jade; I started a YouTube channel and this webpage to help you get a job in the tech world doing what you love. The best way to do that is to make a webpage that shows others what you can do. So join me: together, we can really put your skills to best use in a way that will show a potential employer just what you are capable of!</div>
+		<div class="col-12 section_holder">My name is Jade; I started a <a href="https://www.youtube.com/channel/UCNJNQY4qKnjWor3yqjBEHsg" target="_blank" title="Go to my YouTube channel">YouTube channel</a> and this webpage to help you get a job in the tech world doing what you love. The best way to do that is to make a webpage that shows others what you can do. So join me: together, we can really put your skills to best use in a way that will show a potential employer just what you are capable of!</div>
 
-		<div class="section_holder">If you would like to see my resume, <a href="/public_html/resume.php">please click here</a>.</div>
+		<div class="col-12 section_holder">If you would like to see my resume, <a href="resume.php">please click here</a>.</div>
 
-		<div class="section_holder">This site is a work in progress, and more is on the way soon.</div>
+		<div class="col-12 section_holder">This site is a work in progress, and more is on the way soon.</div>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 		</script>
