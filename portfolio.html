@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #header_top{
+        background-color: var(--header-bg-color);
+      }
+
+      #portfolio_top{
+        height: 100px;
+        font-size: 24px;
+        text-align: center;
+        color: var(--main-title-words);
+      }
+
+      #portfolio_top a:link, a:visited {
+        color: var(--header-link-color);
+      }
+      
+      a:link, a:visited, a:hover, a:active{
+        color: var(--main-link-color);
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      .col{
+        margin-top: 0.75rem;
+      }
+
+      .container {
+        position: relative;
+        width: 50%;
+      }
+
+      .image {
+        display: block;
+        width: 300px;
+        height: 360px;
+        border: 2px solid var(--main-accent-color);
+        border-radius: 15px;
+      }
+
+      .image img {
+        height: 100%;
+        width: 100%;
+        border: 2px solid var(--main-accent-color);
+        border-radius: 12px;
+        object-fit: cover;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 1s ease;
+        background-color: var(--header-bg-color);
+      }
+
+      .container .container:hover .overlay {
+        opacity: 1;
+      }
+
+      .text {
+        display: block;
+        margin-left: 15px;
+        width: 300px;
+        height: 360px;
+        border-radius: 15px;
+        border: 2px solid var(--main-accent-color);
+        text-align: center;
+        font-size: 20px;
+        color: var(--main-light-words);
+      }
+
+      /* .flip-card {
+        margin-top: 20px;
+        background-color: transparent;
+        width: 300px;
+        height: 360px;
+        border: 2px solid var(--main-accent-color);
+        border-radius: 15px;
+        perspective: 1000px;
+      }
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+      }
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari /
+        backface-visibility: hidden;
+      }
+      .flip-card-front {
+        border-radius: 15px;
+        background-color: white;
+        color: var(--main-light-words);
+      }
+      .flip-card-front img{
+        width:290px;
+        height:350px;
+        border-radius:12px;
+      }
+      .flip-card-back {
+        border-radius: 12px;
+        background-color: var(--main-title-color);
+        color: var(--main-light-words);
+        transform: rotateY(180deg);
+      } */
+    </style>
+
+    <meta charset="utf-8">
+    <title>Jade Selke - Data Scientist</title>
+    <meta name="description" content="Jade Selke - Data Scientist">
+    <meta name="author" content="Jade Selke">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="pictures/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="pictures/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="pictures/favicon-16x16.png">
+    <!--<link rel="manifest" href="pictures/site.webmanifest">-->
+    <link rel="mask-icon" href="pictures/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="pictures/favicon.ico">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="msapplication-config" content="pictures/browserconfig.xml">
+    <meta name="theme-color" content="#941919">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="indexStyle.css">
+  </head>
+
+  <body>
+    <wrapper class="d-flex flex-column">
+
+      <!-- Header and Navbar Section -->
+      <header>
+        <!-- top of resume -->
+        <div id="header_top" class="container-fluid px-0">
+          <div class="container">
+            <div id="portfolio_top" class="row align-items-center no-gutters">
+              <div class="col-3 font-weight-bold">JADE SELKE</div>
+              <div class="d-none d-lg-block col-3">Data Scientist</div>
+              <div class="col-5">
+                <a href="mailto:jdselke@gmail.com?Subject=Re:Your%20Resume" target="_top">jdselke@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- navbar -->
+        <nav id="main_navbar" class="navbar navbar-dark bg-dark navbar-expand-md sticky-top">
+          <div class="container">
+            <a class="navbar-brand" href="/" target="_top"><img src="pictures/logo_trans.png" width="130" height="60"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="resume.html">Resume</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_new" href="https://my.indeed.com/p/just-inselke">Indeed</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main Body Section -->
+      <main class="flex-fill">
+        <div class="container mt-3">
+          <div class="row justify-content-around">
+              <button type="button" class="btn btn-danger-overlay col-3">Machine Learning</button>
+              <button type="button" class="btn btn-danger-overlay col-3">Language Processing</button>
+              <button type="button" class="btn btn-danger-overlay col-3">Full Report</button>
+            </div>
+            <div class="row justify-content-around">
+              <button type="button" class="btn btn-danger-overlay col-3">Fraud Analysis</button>
+              <button type="button" class="btn btn-danger-overlay col-3">TensorFlow</button>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+
+            <!-- Yelp Reviews Project-->
+            <!--<div class="col flip-card-holder">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="pictures/yelp.png" alt="Yelp Review Analysis">
+                  </div>
+                  <div class="flip-card-back">
+                    <h3>Yelp Review Analysis</h3>
+                    <span class="badge badge-primary">Machine Learning</span>
+                    <span class="badge badge-primary">Language Processing</span>
+                    <span class="badge badge-primary">Full Report</span>
+                    <span class="badge badge-primary">Fraud Analysis</span>
+                    <span class="badge badge-primary">TensorFlow</span>
+                    <p>This project uses a kaggle dataset to discern fake and real restaurant reviews from Yelp.</p>
+                    <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/yelpReviewAnalysis.html">Python</a>
+                    <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/yelpReviewAnalysis.pptx">Presentation</a>
+                    <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/yelpReviewAnalysis.docx">Full Writeup</a>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+
+            <!-- Client Side Linear Regression -->
+            <div class="col container overlay-holder">
+              <div class="image">
+                <img src="pictures/linearRegression.png" alt="Client Side Linear Regression">
+              </div>
+              <div class="text overlay">
+                <h3>Client Side Linear Regression</h3>
+                <span class="badge badge-primary">Machine Learning</span>
+                <p>This project uses the client to create a simple linear regression.</p>
+                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/linearRegression.html">New Tab</a>
+              </div>
+            </div>
+
+            <!-- Yelp Reviews Project-->
+            <div class="col container overlay-holder">
+              <div class="image">
+                <img src="pictures/yelp.png" alt="Yelp Review Analysis">
+              </div>
+              <div class="text overlay">
+                <h3>Yelp Review Analysis</h3>
+                <span class="badge badge-primary">Machine Learning</span>
+                <span class="badge badge-primary">Language Processing</span>
+                <span class="badge badge-primary">Full Report</span>
+                <span class="badge badge-primary">Fraud Analysis</span>
+                <span class="badge badge-primary">TensorFlow</span>
+                <p>This project uses a kaggle dataset to discern fake and real restaurant reviews from Yelp.</p>
+                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/yelpReviewAnalysis.html">Python</a>
+                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/yelpReviewAnalysis.pptx">Presentation</a>
+                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/yelpReviewAnalysis.docx">Full Writeup</a>
+              </div>
+            </div>
+
+            <!-- Salary Analysis Project-->
+            <div class="col container overlay-holder">
+              <div class="image">
+                <img src="pictures/salaryAnalysis.png" alt="Salary Analysis">
+              </div>
+              <div class="text overlay">
+                <h3>STEM Salary Analysis</h3>
+                <span class="badge badge-primary">Machine Learning</span>
+                <span class="badge badge-primary">Full Report</span>
+                <p>This project uses a kaggle dataset to run salary analysis against STEM Fields based on multiple variables.</p>
+                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/salaryAnalysis.html">Python</a>
+                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/salaryAnalysis.pptx">Presentation</a>
+                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/salaryAnalysis.docx">Full Writeup</a>
+              </div>
+            </div>
+
+            <!-- Fraud Analysis Project-->
+            <div class="col container overlay-holder">
+              <div class="image">
+                <img src="pictures/fraudAnalysis.png" alt="Fraud Analysis">
+              </div>
+              <div class="text overlay">
+                <h3>Fraud Analysis</h3>
+                <span class="badge badge-primary">Fraud Analysis</span>
+                <span class="badge badge-primary">Full Report</span>
+                <p>This project uses a provided dataset to run fraud and money laundering analysis using Excel and IBM i2 software tools.</p>
+                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/fraudAnalysis.html">Python</a>
+                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/fraudAnalysis.xlsx">Excel (dataset)</a>
+                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/fraudAnalysis.pptx">Presentation</a>
+              </div>
+            </div>
+
+            <!-- Picker project -->
+            <div class="col container overlay-holder">
+              <div class="image">
+                <img src="pictures/picker_toc.png" alt="Regression Picker">
+              </div>
+              <div class="text overlay">
+                <h3>Regression Picker Template</h3>
+                <span class="badge badge-primary">Machine Learning</span>
+                <p>This template is used to automatically pick the best regression model from a small sample set, eliminating the need to figure out which of the others to start with!</p>
+                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1lipRUPdMU6PUln5YNRz5_gRTeyeqfrfJ?usp=sharing">Google Colab</a>
+              </div>
+            </div>
+
+            <!-- SLR project -->
+            <div class="col container overlay-holder">
+              <div class="image">
+                <img src="pictures/slr_toc.png" alt="Simple Linear Regression">
+              </div>
+              <div class="text overlay">
+                <h3>Simple Linear Regression Template</h3>
+                <span class="badge badge-primary">Machine Learning</span>
+                <p>This is a basic template for creating a simple linear relation with a data set which has only one dependent variable and only one independent variable</p>
+                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1O3M8qxkG0zOessaP853l1nBT2bieW1F3?usp=sharing">Google Colab</a>
+              </div>
+            </div>
+
+            <!-- MLR project -->
+            <div class="col container overlay-holder">
+              <div class="image">
+                <img src="pictures/mlr_toc.png" alt="Multiple Linear Regression">
+              </div>
+              <div class="text overlay">
+                <h3>Multiple Linear Regression Template</h3>
+                <span class="badge badge-primary">Machine Learning</span>
+                <p>This is a basic template, and you should expect to build on top of this template based on your data set.</p>
+                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1aEX4ttTFl566XX4TnpsUWNMomnh--41m?usp=sharing">Google Colab</a>
+              </div>
+            </div>
+
+            <!-- BE-MLR project - part 2 -->
+            <div class="col container overlay-holder">
+              <div class="image">
+                <img src="pictures/be_toc.png" alt="Backward elimination for Multiple Linear Regression">
+              </div>
+              <div class="text overlay">
+                <h3>Backward Elimination for Multiple Linear Regression Template</h3>
+                <span class="badge badge-primary">Machine Learning</span>
+                <p>This is a basic template, and you should expect to build on top of this template based on your data set. Note - requires special libraries!</p>
+                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1vmu4V4gjcxDo_VAuy3ylag50ayO3htxE?usp=sharing">Google Colab</a>
+              </div>
+            </div>
+
+            <!-- Poly project -->
+            <div class="col container overlay-holder">
+              <div class="image">
+                <img src="pictures/poly_toc.png" alt="Polynomial Regression">
+              </div>
+              <div class="text overlay">
+                <h3>Polynomial Regression Template</h3>
+                <span class="badge badge-primary">Machine Learning</span>
+                <p>This is a basic template, and you should expect to build on top of this template based on your data set.</p>
+                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1h1r5HQWsMQa62Ex8hdPcjYWStu03qXWc?usp=sharing">Google Colab</a>
+              </div>
+            </div>
+
+            <!-- SVR project -->
+            <div class="col container overlay-holder">
+              <div class="image">
+                <img src="pictures/svr_toc.png" alt="Support Vector Regression">
+              </div>
+              <div class="text overlay">
+                <h3>Support Vector Regression (SVR) Template</h3>
+                <span class="badge badge-primary">Machine Learning</span>
+                <p>This is a basic template, and you should expect to build on top of this template based on your data set.</p>
+                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1j0G1up3rqTuUX3KBSufrCLgRlPbyzs8b?usp=sharing">Google Colab</a>
+              </div>
+            </div>
+
+            <!-- DTree project -->
+            <div class="col container overlay-holder">
+              <div class="image">
+                <img src="pictures/dtr_toc.png" alt="Decision Tree Regression">
+              </div>
+              <div class="text overlay">
+                <h3>Decision Tree Regression Template</h3>
+                <span class="badge badge-primary">Machine Learning</span>
+                <p>In this simple Decision Tree Regression, we will predict the best days to sell ice cream on based on the temperature outside in order to generate the highest profit.</p>
+                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1i6vYpzbh5Pg4OxjkOafHLklq1cOIyV8o?usp=sharing">Google Colab</a>
+              </div>
+            </div>
+
+            <!-- Forest project -->
+            <div class="col container overlay-holder">
+              <div class="image">
+                <img src="pictures/rfr_toc.png" alt="Random Forest Regression">
+              </div>
+              <div class="text overlay">
+                <h3>Random Forest Regression Template</h3>
+                <span class="badge badge-primary">Machine Learning</span>
+                <p>In this simple Random Tree Regression, we will predict the best days to sell ice cream on based on the temperature outside in order to generate the highest profit.</p>
+                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1lTdJpaWgKJq07Tp2POBmq38l9E5OPRhu?usp=sharing">Google Colab</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer Section -->
+      <footer class="footer mt-4 pt-3">
+        <div class="container">
+          <div class="row w-100">
+            <div class="text-left col mr-auto">
+              <small>©&nbsp;No Framework, No Templates, No Parachute! - Jade Selke, Copyright 2022</small>
+            </div>
+            <div class="text-right col">
+              <a class="navbar-brand" href="/" target="_top"><img src="pictures/logo_trans.png" width="130" height="60"></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="javascript/navbar.js" type="text/javascript"></script>
+      <script src="javascript/keepFlipCards.js" type="text/javascript"></script>
+    </wrapper>
+
+  </body>
+</html>

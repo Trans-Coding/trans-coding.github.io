@@ -1,0 +1,107 @@
+:root{
+  --main-title-color: #1F597E;
+  --main-title-words:  #DDDDDD;
+  --main-accent-color: #A079B4;
+  --main-bg-color:  #EEEEEE;
+  --main-link-color: #A079B4;
+  --main-dark-words: #DDDDDD;
+  --main-tertiary-color: #DDDDDD;
+  --main-light-words:  #F3DCFA;
+  --header-bg-color: #1F597E;
+  --header-link-color: #DDDDDD;
+  --icon-color: #343A40;
+}
+html{
+  height: 100%;
+}
+body{
+  font-family: 'Nunito', sans-serif;
+  width: 100%;
+  margin: 80px auto;
+  background-color: var(--main-bg-color);
+  padding-bottom: 20px;
+  margin-bottom: var(--main-footer-spacing);
+}
+body, wrapper{
+  min-height: 100vh;
+}
+header{
+  background-color: var(--header-bg-color);
+  opacity: 1.0;
+}
+.flex-fill{
+  flex: 1 1 auto;
+}
+table{
+  width: 100%;
+  text-align: left;
+}
+h1, h3{
+  padding: 0px;
+  margin-bottom: 0px !important;
+}
+.section_holder{
+  border-top: 5px solid;
+  border-color: var(--main-accent-color);
+  margin-top: 20px; 
+}
+.job-image{
+  width: 100%;
+  border: 3px solid var(--main-title-color);
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+.badge-primary{
+  background-color: var(--main-accent-color);
+}
+.badge-secondary{
+  background-color: var(--main-primary-color);
+}
+.badge-warning{
+  background-color: var(--main-link-color);
+}
+.btn-primary-overlay,
+.btn-primary-overlay:hover, 
+.btn-primary-overlay:active .active,
+.btn-primary-overlay:focus,
+.btn-primary-overlay:visited{
+  font-weight: bold;
+  color: var(--main-light-words);
+  background-color: var(--main-tertiary-color) !important;
+  border-color: var(--main-light-words);
+}
+.btn-danger-overlay,
+.btn-danger-overlay:hover, 
+.btn-danger-overlay:active .active,
+.btn-danger-overlay:focus,
+.btn-danger-overlay:visited{
+  font-weight: bold;
+  color: var(--main-dark-words);
+  background-color: var(--main-accent-color);
+  border-color: var(--main-dark-words);
+}
+.content{
+  padding: 16px;
+}
+.fa-3x{
+  color: var(--icon-color);
+}
+.fa-3x:hover {
+  color: var(--main-title-color);
+}
+.footer{
+  min-height: var(--main-footer-height);
+  background-color: var(--main-title-color);
+  color: var(--main-light-words);
+}
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content{
+  padding-top: 60px;
+}
+#main_navbar{
+  overflow: hidden;
+}
