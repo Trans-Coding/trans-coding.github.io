@@ -1,2 +1,2 @@
 # trans-coding.github.io
-Front facing site for public viewing
+This is a fully from scratch built site with the purpose of displaying a resume and portfolio for Jade Selke. It is built in simple HTML5, CSS3, and JQuery/JavaScript with Bootstrap components for easier viewing.

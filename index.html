@@ -1,28 +1,15 @@
 <!DOCTYPE html>
 <head>
   <style>
-    #header_top{
-      background-color: var(--header-bg-color);
+    body, html {
+      height: 100%;
     }
 
-    #main_top{
-      font-size: 24px;
-      text-align: center;
-      color: var(--main-title-words);
-    }
-
-    #main_top a:link, a:visited {
-      color: var(--header-link-color);
-    }
-
-    a:link, a:visited, a:hover, a:active{
-      color: var(--main-link-color);
-      background-color: transparent;
-      text-decoration: none;
-    }
-
-    h4{
-      color: var(--main-accent-color);
+    .col-6 p,
+    .col-md-8 p,
+    .col-sm-10 p{
+       padding-left: 2em;
+       padding-right: 2em;
     }
   </style>
 
@@ -46,25 +33,20 @@
   <link rel="stylesheet" type="text/css" href="indexStyle.css">
 </head>
 <body>
-  <wrapper class="d-flex flex-column">
+  <wrapper class="d-flex flex-column justify-content-md-center">
 
     <!-- Header and Navbar Section -->
     <header>
       <div id="header_top" class="container-fluid px-0">
         <div class="container">
-          <div id="main_top" class="row align-items-center no-gutters">
-            <div class="d-none d-lg-block col-12">
-              <h1>Jade Selke</h1>
-              <h2>Data Scientist and Full Stack Developer</h2>
-              <h3>Passion for answering questions based on clean data, solid methodology, and proven algorithms to extract actionable insights from noisy and unstructured information.</h3>
-            </div>
-            <div class="d-lg-none col-12">
-              <h1>Jade Selke</h1>
-              <h3>Data Scientist and Full Stack Developer</h3>
-            </div>
+          <div id="header_inner" class="row align-items-center no-gutters">
+            <div class="col-3 font-weight-bold">JADE SELKE</div>
+            <div class="d-none d-lg-block col-3">Data Scientist</div>
+            <div class="col-5">
+              <a href="mailto:jdselke@gmail.com?Subject=Re:Your%20Resume">jdselke@gmail.com</a>
+            </div>  
           </div>
         </div>
-        
       </div>
 
       <!-- navbar -->
@@ -86,28 +68,44 @@
               <li class="nav-item">
                 <a class="nav-link" href="portfolio.html">Portfolio</a>
               </li>
+              <!--
               <li class="nav-item">
                 <a class="nav-link" target="_new" href="https://my.indeed.com/p/just-inselke">Indeed</a>
               </li>
+              -->
+              <li class="nav-item">
+                <a class="nav-link" target="_new" href="https://www.linkedin.com/in/jadeselke/">LinkedIn</a>
+              </li>
             </ul>
-          </div>	
+          </div>
         </div>
       </nav>
     </header>
-    
+
     <!-- Main Body Section -->
-    <main class="flex-fill">
-      <div class="container">
-        <div class="col-12 section_holder">
-          <div class="row">
-            <div class="col-6">
-              <p>My name is Jade. I am currently a full stack developer building websites for contractors. From creation of documentation,
-                to DocuSign API connections to ensure valid signatures, to the actual money movement to allow contractors to focus on work. Every
-                step of the process is accounted for: contract to change order to invoicing. This ensures that the contractors no longer
-                rely on the old pen and paper process to complete a job, allowing for a much faster ROI and the chance to get to work faster.
-              </p>
+    <div class="parallax">
+      <main class="col-12">
+        <div class="container">
+          <div class="row justify-content-center no-gutters text-holder">
+            <div class="d-none d-block col-sm-10 text-center">
+              <h3>My name is Jade Selke and I am a Data Scientist and Full Stack Developer. I have a passion for answering questions based on clean data, solid methodology, and proven algorithms to extract actionable insights from noisy and unstructured information.</h3>
             </div>
-            <div class="col-6">
+          </div>
+        </div>
+
+        <div class="container justify-content-start">
+          <div class="row no-gutters col-lg-6 col-md-8 col-10 text-center text-holder">
+            <p>I am currently a full stack developer building websites for contractors. From creation of documentation,
+              to DocuSign API connections to ensure valid signatures, to the actual money movement to allow contractors to focus on work. Every
+              step of the process is accounted for: contract to change order to invoicing. This ensures that the contractors no longer
+              rely on the old pen and paper process to complete a job, allowing for a much faster ROI and the chance to get to work faster.
+            </p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row justify-content-end no-gutters">
+            <div class=" col-lg-6 col-md-8 col-10 text-center text-holder">
               <p>I also have a Master of Science in Data Science and a Specialization in Financial Crime from Utica University. I have prior 
                 experience building the entire data pipeline in Azure: Data Factory, Data Lake, and Databricks backed by models built in Python
                 for real-time consumption by Business Analysts and Product Owners via Business Intelligence platforms like PowerBI. I have a
@@ -116,47 +114,50 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="container">
-        <div class="col-12 section_holder">
-          <p>If you would like to see my resume, <a href="resume.html">please click here</a>. I currently mostly work with the following:</p>
-          <h4>Coding:</h4>
-          <div class="d-flex justify-content-around">
-            <i class="fa-3x fab fa-python"></i>
-            <i class="fa-3x fab fa-r-project"></i>
-            <i class="fa-3x fab fa-kaggle"></i>
-            <i class="fa-3x fab fa-google"></i>
-            <i class="fa-3x fab fa-js-square"></i>
-            <i class="fa-3x fab fa-html5"></i>
-            <i class="fa-3x fab fa-css3"></i>
-            <i class="fa-3x fab fa-sass"></i>
-          </div>
-          <h4>Interfaces:</h4>
-          <div class="d-flex justify-content-around">
-            <i class="fa-3x fab fa-microsoft"></i>
-            <i class="fa-3x fab fa-github"></i>
-            <i class="fa-3x fab fa-gitkraken"></i>
-            <i class="fa-3x fab fa-aws"></i>
-            <i class="fa-3x fab fa-chrome"></i>
-            <i class="fa-3x fab fa-npm"></i>
+        <div class="container">
+          <div class="col-12">
+            <div class="row justify-content-md-center text-holder">
+              <div class="col-12">
+                <p>If you would like to see my resume, <a href="resume.html">please click here</a>. I currently mostly work with the following:</p>
+              </div>
+              <div class="col-12">
+                <h4>Coding:</h4>
+                <div class="d-flex justify-content-around">
+                  <i class="fa-3x fab fa-python"></i>
+                  <i class="fa-3x fab fa-r-project"></i>
+                  <i class="fa-3x fab fa-kaggle"></i>
+                  <i class="fa-3x fab fa-google"></i>
+                  <i class="fa-3x fab fa-js-square"></i>
+                  <i class="fa-3x fab fa-html5"></i>
+                  <i class="fa-3x fab fa-css3"></i>
+                  <i class="fa-3x fab fa-sass"></i>
+                </div>
+              </div>
+              <div class="col-12">
+                <h4>Interfaces:</h4>
+                <div class="d-flex justify-content-around">
+                  <i class="fa-3x fab fa-microsoft"></i>
+                  <i class="fa-3x fab fa-github"></i>
+                  <i class="fa-3x fab fa-gitkraken"></i>
+                  <i class="fa-3x fab fa-aws"></i>
+                  <i class="fa-3x fab fa-chrome"></i>
+                  <i class="fa-3x fab fa-npm"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="container">
-        <div class="col-12 section_holder">
-          This site is a work in progress, and more is on the way soon.
-        </div>
-      </div>
-    </main>
+      </main>
+    </div>
 
     <!-- Footer Section -->
     <footer class="footer pt-3">
       <div class="container">
         <div class="row w-100">
           <div class="text-left col mr-auto">
-            <small>©&nbsp;No Framework, No Templates, No Parachute! - Jade Selke, Copyright 2022</small>
+            <small>©&nbsp;No Framework, No Templates, No Parachute! - Jade Selke, Copyright 2024</small>
           </div>
           <div class="text-right col">
             <a class="navbar-brand" href="/" target="_top"><img src="pictures/logo_trans.png" width="130" height="60"></a>

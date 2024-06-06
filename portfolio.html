@@ -2,27 +2,6 @@
 <html>
   <head>
     <style>
-      #header_top{
-        background-color: var(--header-bg-color);
-      }
-
-      #portfolio_top{
-        height: 100px;
-        font-size: 24px;
-        text-align: center;
-        color: var(--main-title-words);
-      }
-
-      #portfolio_top a:link, a:visited {
-        color: var(--header-link-color);
-      }
-      
-      a:link, a:visited, a:hover, a:active{
-        color: var(--main-link-color);
-        background-color: transparent;
-        text-decoration: none;
-      }
-
       .col{
         margin-top: 0.75rem;
       }
@@ -34,8 +13,6 @@
 
       .image {
         display: block;
-        width: 300px;
-        height: 360px;
         border: 2px solid var(--main-accent-color);
         border-radius: 15px;
       }
@@ -61,15 +38,18 @@
         background-color: var(--header-bg-color);
       }
 
-      .container .container:hover .overlay {
+      .overlay-holder a:link, .overlay-holder a:visited, .overlay-holder a:hover, .overlay-holder a:active{
+        color: var(--main-link-color);
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      .container:hover .overlay {
         opacity: 1;
       }
 
       .text {
         display: block;
-        margin-left: 15px;
-        width: 300px;
-        height: 360px;
         border-radius: 15px;
         border: 2px solid var(--main-accent-color);
         text-align: center;
@@ -150,7 +130,7 @@
         <!-- top of resume -->
         <div id="header_top" class="container-fluid px-0">
           <div class="container">
-            <div id="portfolio_top" class="row align-items-center no-gutters">
+            <div id="header_inner" class="row align-items-center no-gutters">
               <div class="col-3 font-weight-bold">JADE SELKE</div>
               <div class="d-none d-lg-block col-3">Data Scientist</div>
               <div class="col-5">
@@ -179,8 +159,13 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="portfolio.html">Portfolio</a>
                 </li>
+                <!--
                 <li class="nav-item">
                   <a class="nav-link" target="_new" href="https://my.indeed.com/p/just-inselke">Indeed</a>
+                </li>
+                -->
+                <li class="nav-item">
+                  <a class="nav-link" target="_new" href="https://www.linkedin.com/in/jadeselke/">LinkedIn</a>
                 </li>
               </ul>
             </div>
@@ -189,216 +174,299 @@
       </header>
 
       <!-- Main Body Section -->
-      <main class="flex-fill">
-        <div class="container mt-3">
-          <div class="row justify-content-around">
-              <button type="button" class="btn btn-danger-overlay col-3">Machine Learning</button>
-              <button type="button" class="btn btn-danger-overlay col-3">Language Processing</button>
-              <button type="button" class="btn btn-danger-overlay col-3">Full Report</button>
+      <div class="parallax">
+        <main class="flex-fill">
+          <div class="container text-holder">
+            <div class="row justify-content-center no-gutters">
+              <div class="d-none d-block text-center col-10">
+                <h4> Click any of these buttons to filter projects based on type. Click any of the project pictures for access to code, write-ups, and more.</h4>
+              </div>
             </div>
             <div class="row justify-content-around">
-              <button type="button" class="btn btn-danger-overlay col-3">Fraud Analysis</button>
-              <button type="button" class="btn btn-danger-overlay col-3">TensorFlow</button>
+                <button type="button" class="btn btn-danger-overlay col-3">Machine Learning</button>
+                <button type="button" class="btn btn-danger-overlay col-3">Language Processing</button>
+                <button type="button" class="btn btn-danger-overlay col-3">Full Report</button>
+              </div>
+              <div class="row justify-content-around">
+                <button type="button" class="btn btn-danger-overlay col-3">Fraud Analysis</button>
+                <button type="button" class="btn btn-danger-overlay col-3">TensorFlow</button>
+            </div>
           </div>
-        </div>
 
-        <div class="container">
-          <div class="row">
+          <!--<div class="container">
+            <div class="row">-->
 
-            <!-- Yelp Reviews Project-->
-            <!--<div class="col flip-card-holder">
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="pictures/yelp.png" alt="Yelp Review Analysis">
+              <!-- Yelp Reviews Project-->
+              <!--<div class="col flip-card-holder">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="pictures/yelp.png" alt="Yelp Review Analysis">
+                    </div>
+                    <div class="flip-card-back">
+                      <h3>Yelp Review Analysis</h3>
+                      <span class="badge badge-primary">Machine Learning</span>
+                      <span class="badge badge-primary">Language Processing</span>
+                      <span class="badge badge-primary">Full Report</span>
+                      <span class="badge badge-primary">Fraud Analysis</span>
+                      <span class="badge badge-primary">TensorFlow</span>
+                      <p>This project uses a kaggle dataset to discern fake and real restaurant reviews from Yelp.</p>
+                      <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/yelpReviewAnalysis.html">Python</a>
+                      <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/yelpReviewAnalysis.pptx">Presentation</a>
+                      <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/yelpReviewAnalysis.docx">Full Writeup</a>
+                    </div>
                   </div>
-                  <div class="flip-card-back">
-                    <h3>Yelp Review Analysis</h3>
-                    <span class="badge badge-primary">Machine Learning</span>
-                    <span class="badge badge-primary">Language Processing</span>
-                    <span class="badge badge-primary">Full Report</span>
-                    <span class="badge badge-primary">Fraud Analysis</span>
-                    <span class="badge badge-primary">TensorFlow</span>
-                    <p>This project uses a kaggle dataset to discern fake and real restaurant reviews from Yelp.</p>
-                    <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/yelpReviewAnalysis.html">Python</a>
-                    <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/yelpReviewAnalysis.pptx">Presentation</a>
-                    <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/yelpReviewAnalysis.docx">Full Writeup</a>
+                </div>
+              </div>-->
+
+              <!-- Masters Thesis -->
+              <div class="container text-holder overlay-parent">
+                <div class="row justify-content-center no-gutters">
+                  <div class="d-none d-block text-center col-10">
+                    <h4>
+                      This contains a summary of my Masters Thesis on the percentage of people who identify as other than cisgender in the United States using a large dataset from the Census Bureau along with analysis across other incorporated data. Covariance was checked to isolate variables, and Bernoulli Naive Bayes and Support Vector Machine classifiers were used for predictors against the datasets. The models were also used to predict whether an individual would identify as other than cisgender given basic information, and was shown to have over 80% accuracy.
+                    </h4>
+                  </div>
+                  <div class="col-12 col-md-6 overlay-holder">
+                    <div class="image">
+                      <img src="pictures/mastersAnalysis.png" alt="Client Side Linear Regression">
+                    </div>
+                    <div class="text overlay">
+                      <h2>Analysis of Gender Identity Freedom</h2>
+                      <span class="badge badge-primary">Machine Learning</span>
+                      <span class="badge badge-primary">Full Report</span>
+                      <h3>This project uses BNB and SVM classifiers against large datasets.</h3>
+                      <br>
+                      <a class="btn-lg btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/mastersAnalysis.html">Python</a>
+                      <a class="btn-lg btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/mastersAnalysis.pptx">Presentation</a>
+                      <a class="btn-lg btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="https://www.proquest.com/openview/33550cd574de686ae34210425cda6446/1?pq-origsite=gscholar&cbl=18750&diss=y">Full Thesis</a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>-->
 
-            <!-- Client Side Linear Regression -->
-            <div class="col container overlay-holder">
-              <div class="image">
-                <img src="pictures/linearRegression.png" alt="Client Side Linear Regression">
+              <!-- Client Side Linear Regression -->
+              <div class="container text-holder overlay-parent">
+                <div class="row justify-content-center no-gutters">
+                  <div class="d-none d-block text-center col-10">
+                    <h4>
+                      This project uses client side rendering to create a simple linear regression model based on user input. It generates a series of semi-random numbers based on a proposed slope, and then calculates a linear regression from those points. This code is written entirely from scratch, without the use of any libraries or models, other than a graphing utility from Google for charts.
+                    </h4>
+                  </div>
+                  <div class="col-12 col-md-6 overlay-holder">
+                    <div class="image">
+                      <img src="pictures/linearRegression.png" alt="Client Side Linear Regression">
+                    </div>
+                    <div class="text overlay">
+                      <h2>Client Side Linear Regression</h2>
+                      <span class="badge badge-primary">Machine Learning</span>
+                      <h3>This project uses the client to create a simple linear regression.</h3>
+                      <br>
+                      <a class="btn-lg btn-primary-overlay active mt-3" role="button" aria-pressed="true" target="_new" href="projects/linearRegression.html">New Tab</a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="text overlay">
-                <h3>Client Side Linear Regression</h3>
-                <span class="badge badge-primary">Machine Learning</span>
-                <p>This project uses the client to create a simple linear regression.</p>
-                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/linearRegression.html">New Tab</a>
-              </div>
-            </div>
 
-            <!-- Yelp Reviews Project-->
-            <div class="col container overlay-holder">
-              <div class="image">
-                <img src="pictures/yelp.png" alt="Yelp Review Analysis">
+              <!-- Yelp Reviews Project-->
+              <div class="container text-holder overlay-parent">
+                <div class="row justify-content-center no-gutters">
+                  <div class="d-none d-block text-center col-10">
+                    <h3>
+                      Discerning fake reviews is a difficult task. In this project, a Kaggle dataset was used with both known fake and real yelp reviews to create an algorithm to find fake reviews. It uses Natural Language Processing and contains a full report writeup.
+                    </h3>
+                  </div>
+                  <div class="col-12 col-md-6 overlay-holder">
+                    <div class="image">
+                      <img src="pictures/yelp.png" alt="Yelp Review Analysis">
+                    </div>
+                    <div class="text overlay">
+                      <h2>Yelp Review Analysis</h2>
+                      <span class="badge badge-primary">Machine Learning</span>
+                      <span class="badge badge-primary">Language Processing</span>
+                      <span class="badge badge-primary">Full Report</span>
+                      <span class="badge badge-primary">Fraud Analysis</span>
+                      <span class="badge badge-primary">TensorFlow</span>
+                      <h3>This project uses a kaggle dataset to discern fake and real restaurant reviews from Yelp.</h3>
+                      <br>
+                      <a class="btn-lg btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/yelpReviewAnalysis.html">Python</a>
+                      <a class="btn-lg btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/yelpReviewAnalysis.pptx">Presentation</a>
+                      <a class="btn-lg btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/yelpReviewAnalysis.docx">Full Writeup</a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="text overlay">
-                <h3>Yelp Review Analysis</h3>
-                <span class="badge badge-primary">Machine Learning</span>
-                <span class="badge badge-primary">Language Processing</span>
-                <span class="badge badge-primary">Full Report</span>
-                <span class="badge badge-primary">Fraud Analysis</span>
-                <span class="badge badge-primary">TensorFlow</span>
-                <p>This project uses a kaggle dataset to discern fake and real restaurant reviews from Yelp.</p>
-                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/yelpReviewAnalysis.html">Python</a>
-                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/yelpReviewAnalysis.pptx">Presentation</a>
-                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/yelpReviewAnalysis.docx">Full Writeup</a>
-              </div>
-            </div>
 
-            <!-- Salary Analysis Project-->
-            <div class="col container overlay-holder">
-              <div class="image">
-                <img src="pictures/salaryAnalysis.png" alt="Salary Analysis">
+              <!-- Salary Analysis Project-->
+              <div class="container text-holder overlay-parent">
+                <div class="row justify-content-center no-gutters">
+                  <div class="d-none d-block text-center col-10">
+                    <h3>
+                      Across multiple variable sets, collected from samples in Kaggle, this project looks at the most and least likely aspects of a person's resume and personal information to determine their salary in STEM over time.
+                    </h3>
+                  </div>
+                  <div class="col-12 col-md-6 overlay-holder">
+                    <div class="image">
+                      <img src="pictures/salaryAnalysis.png" alt="Salary Analysis">
+                    </div>
+                    <div class="text overlay">
+                      <h2>STEM Salary Analysis</h2>
+                      <span class="badge badge-primary">Machine Learning</span>
+                      <span class="badge badge-primary">Full Report</span>
+                      <h3>This project uses a kaggle dataset to run salary analysis against STEM Fields based on multiple variables.</h3>
+                      <br>
+                      <a class="btn-lg btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/salaryAnalysis.html">Python</a>
+                      <a class="btn-lg btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/salaryAnalysis.pptx">Presentation</a>
+                      <a class="btn-lg btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/salaryAnalysis.docx">Full Writeup</a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="text overlay">
-                <h3>STEM Salary Analysis</h3>
-                <span class="badge badge-primary">Machine Learning</span>
-                <span class="badge badge-primary">Full Report</span>
-                <p>This project uses a kaggle dataset to run salary analysis against STEM Fields based on multiple variables.</p>
-                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/salaryAnalysis.html">Python</a>
-                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/salaryAnalysis.pptx">Presentation</a>
-                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/salaryAnalysis.docx">Full Writeup</a>
-              </div>
-            </div>
 
-            <!-- Fraud Analysis Project-->
-            <div class="col container overlay-holder">
-              <div class="image">
-                <img src="pictures/fraudAnalysis.png" alt="Fraud Analysis">
+              <!-- Fraud Analysis Project-->
+              <div class="container text-holder overlay-parent">
+                <div class="row justify-content-center no-gutters">
+                  <div class="d-none d-block text-center col-10">
+                    <h3>
+                      Fraud Analysis is one of the most important tools that can be employed with Data Science. This project uses a sample dataset to run fraud and money laundering analysis using Excel and IBM i2 software tools. It contains analysis via Excel and a presentation to report findings, and explanations of how these tools can be improved over time to catch new methods of fraud in banking systems.
+                    </h3>
+                  </div>
+                  <div class="col-12 col-md-6 overlay-holder">
+                    <div class="image">
+                      <img src="pictures/fraudAnalysis.png" alt="Fraud Analysis">
+                    </div>
+                    <div class="text overlay">
+                      <h2>Fraud Analysis</h2>
+                      <span class="badge badge-primary">Fraud Analysis</span>
+                      <span class="badge badge-primary">Full Report</span>
+                      <h3>This project uses a provided dataset to run fraud and money laundering analysis using Excel and IBM i2 software tools.</h3>
+                      <br>
+                      <a class="btn-lg btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/fraudAnalysis.html">Python</a>
+                      <a class="btn-lg btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/fraudAnalysis.xlsx">Excel (dataset)</a>
+                      <a class="btn-lg btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/fraudAnalysis.pptx">Presentation</a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="text overlay">
-                <h3>Fraud Analysis</h3>
-                <span class="badge badge-primary">Fraud Analysis</span>
-                <span class="badge badge-primary">Full Report</span>
-                <p>This project uses a provided dataset to run fraud and money laundering analysis using Excel and IBM i2 software tools.</p>
-                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/fraudAnalysis.html">Python</a>
-                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" target="_new" href="projects/fraudAnalysis.xlsx">Excel (dataset)</a>
-                <a class="btn btn-primary-overlay active mt-1" role="button" aria-pressed="true" href="projects/fraudAnalysis.pptx">Presentation</a>
-              </div>
-            </div>
 
-            <!-- Picker project -->
-            <div class="col container overlay-holder">
-              <div class="image">
-                <img src="pictures/picker_toc.png" alt="Regression Picker">
+              <!-- Picker project -->
+              <div class="container text-holder overlay-parent">
+                <div class="row justify-content-center no-gutters">
+                  <div class="d-none d-block text-center col-10">
+                    <h3>
+                      Sometimes finding the best analytical algorithm is best done via a small dataset against multiple algorithms via best fit tools. This project picks the algorithm that best fits a generic dataset, and can be easily adapted to almost any project.
+                    </h3>
+                  </div>
+                  <div class="col-12 col-md-6 overlay-holder">
+                    <div class="image">
+                      <img src="pictures/picker_toc.png" alt="Regression Picker">
+                    </div>
+                    <div class="text overlay">
+                      <h2>Regression Picker Template</h2>
+                      <span class="badge badge-primary">Machine Learning</span>
+                      <h3>This template is used to automatically pick the best regression model from a small sample set, eliminating the need to figure out which of the others to start with!</h3>
+                      <br>
+                      <a class="btn-lg btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1lipRUPdMU6PUln5YNRz5_gRTeyeqfrfJ?usp=sharing">Google Colab</a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="text overlay">
-                <h3>Regression Picker Template</h3>
-                <span class="badge badge-primary">Machine Learning</span>
-                <p>This template is used to automatically pick the best regression model from a small sample set, eliminating the need to figure out which of the others to start with!</p>
-                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1lipRUPdMU6PUln5YNRz5_gRTeyeqfrfJ?usp=sharing">Google Colab</a>
-              </div>
-            </div>
 
-            <!-- SLR project -->
-            <div class="col container overlay-holder">
-              <div class="image">
-                <img src="pictures/slr_toc.png" alt="Simple Linear Regression">
-              </div>
-              <div class="text overlay">
-                <h3>Simple Linear Regression Template</h3>
-                <span class="badge badge-primary">Machine Learning</span>
-                <p>This is a basic template for creating a simple linear relation with a data set which has only one dependent variable and only one independent variable</p>
-                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1O3M8qxkG0zOessaP853l1nBT2bieW1F3?usp=sharing">Google Colab</a>
-              </div>
-            </div>
+              <!-- SLR project -->
+              <!--<div class="col container overlay-holder">
+                <div class="image">
+                  <img src="pictures/slr_toc.png" alt="Simple Linear Regression">
+                </div>
+                <div class="text overlay">
+                  <h3>Simple Linear Regression Template</h3>
+                  <span class="badge badge-primary">Machine Learning</span>
+                  <p>This is a basic template for creating a simple linear relation with a data set which has only one dependent variable and only one independent variable</p>
+                  <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1O3M8qxkG0zOessaP853l1nBT2bieW1F3?usp=sharing">Google Colab</a>
+                </div>
+              </div>-->
 
-            <!-- MLR project -->
-            <div class="col container overlay-holder">
-              <div class="image">
-                <img src="pictures/mlr_toc.png" alt="Multiple Linear Regression">
-              </div>
-              <div class="text overlay">
-                <h3>Multiple Linear Regression Template</h3>
-                <span class="badge badge-primary">Machine Learning</span>
-                <p>This is a basic template, and you should expect to build on top of this template based on your data set.</p>
-                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1aEX4ttTFl566XX4TnpsUWNMomnh--41m?usp=sharing">Google Colab</a>
-              </div>
-            </div>
+              <!-- MLR project -->
+              <!--<div class="col container overlay-holder">
+                <div class="image">
+                  <img src="pictures/mlr_toc.png" alt="Multiple Linear Regression">
+                </div>
+                <div class="text overlay">
+                  <h3>Multiple Linear Regression Template</h3>
+                  <span class="badge badge-primary">Machine Learning</span>
+                  <p>This is a basic template, and you should expect to build on top of this template based on your data set.</p>
+                  <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1aEX4ttTFl566XX4TnpsUWNMomnh--41m?usp=sharing">Google Colab</a>
+                </div>
+              </div>-->
 
-            <!-- BE-MLR project - part 2 -->
-            <div class="col container overlay-holder">
-              <div class="image">
-                <img src="pictures/be_toc.png" alt="Backward elimination for Multiple Linear Regression">
-              </div>
-              <div class="text overlay">
-                <h3>Backward Elimination for Multiple Linear Regression Template</h3>
-                <span class="badge badge-primary">Machine Learning</span>
-                <p>This is a basic template, and you should expect to build on top of this template based on your data set. Note - requires special libraries!</p>
-                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1vmu4V4gjcxDo_VAuy3ylag50ayO3htxE?usp=sharing">Google Colab</a>
-              </div>
-            </div>
+              <!-- BE-MLR project - part 2 -->
+              <!--<div class="col container overlay-holder">
+                <div class="image">
+                  <img src="pictures/be_toc.png" alt="Backward elimination for Multiple Linear Regression">
+                </div>
+                <div class="text overlay">
+                  <h3>Backward Elimination for Multiple Linear Regression Template</h3>
+                  <span class="badge badge-primary">Machine Learning</span>
+                  <p>This is a basic template, and you should expect to build on top of this template based on your data set. Note - requires special libraries!</p>
+                  <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1vmu4V4gjcxDo_VAuy3ylag50ayO3htxE?usp=sharing">Google Colab</a>
+                </div>
+              </div>-->
 
-            <!-- Poly project -->
-            <div class="col container overlay-holder">
-              <div class="image">
-                <img src="pictures/poly_toc.png" alt="Polynomial Regression">
-              </div>
-              <div class="text overlay">
-                <h3>Polynomial Regression Template</h3>
-                <span class="badge badge-primary">Machine Learning</span>
-                <p>This is a basic template, and you should expect to build on top of this template based on your data set.</p>
-                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1h1r5HQWsMQa62Ex8hdPcjYWStu03qXWc?usp=sharing">Google Colab</a>
-              </div>
-            </div>
+              <!-- Poly project -->
+              <!--<div class="col container overlay-holder">
+                <div class="image">
+                  <img src="pictures/poly_toc.png" alt="Polynomial Regression">
+                </div>
+                <div class="text overlay">
+                  <h3>Polynomial Regression Template</h3>
+                  <span class="badge badge-primary">Machine Learning</span>
+                  <p>This is a basic template, and you should expect to build on top of this template based on your data set.</p>
+                  <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1h1r5HQWsMQa62Ex8hdPcjYWStu03qXWc?usp=sharing">Google Colab</a>
+                </div>
+              </div>-->
 
-            <!-- SVR project -->
-            <div class="col container overlay-holder">
-              <div class="image">
-                <img src="pictures/svr_toc.png" alt="Support Vector Regression">
-              </div>
-              <div class="text overlay">
-                <h3>Support Vector Regression (SVR) Template</h3>
-                <span class="badge badge-primary">Machine Learning</span>
-                <p>This is a basic template, and you should expect to build on top of this template based on your data set.</p>
-                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1j0G1up3rqTuUX3KBSufrCLgRlPbyzs8b?usp=sharing">Google Colab</a>
-              </div>
-            </div>
+              <!-- SVR project -->
+              <!--<div class="col container overlay-holder">
+                <div class="image">
+                  <img src="pictures/svr_toc.png" alt="Support Vector Regression">
+                </div>
+                <div class="text overlay">
+                  <h3>Support Vector Regression (SVR) Template</h3>
+                  <span class="badge badge-primary">Machine Learning</span>
+                  <p>This is a basic template, and you should expect to build on top of this template based on your data set.</p>
+                  <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1j0G1up3rqTuUX3KBSufrCLgRlPbyzs8b?usp=sharing">Google Colab</a>
+                </div>
+              </div>-->
 
-            <!-- DTree project -->
-            <div class="col container overlay-holder">
-              <div class="image">
-                <img src="pictures/dtr_toc.png" alt="Decision Tree Regression">
-              </div>
-              <div class="text overlay">
-                <h3>Decision Tree Regression Template</h3>
-                <span class="badge badge-primary">Machine Learning</span>
-                <p>In this simple Decision Tree Regression, we will predict the best days to sell ice cream on based on the temperature outside in order to generate the highest profit.</p>
-                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1i6vYpzbh5Pg4OxjkOafHLklq1cOIyV8o?usp=sharing">Google Colab</a>
-              </div>
-            </div>
+              <!-- DTree project -->
+              <!--<div class="col container overlay-holder">
+                <div class="image">
+                  <img src="pictures/dtr_toc.png" alt="Decision Tree Regression">
+                </div>
+                <div class="text overlay">
+                  <h3>Decision Tree Regression Template</h3>
+                  <span class="badge badge-primary">Machine Learning</span>
+                  <p>In this simple Decision Tree Regression, we will predict the best days to sell ice cream on based on the temperature outside in order to generate the highest profit.</p>
+                  <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1i6vYpzbh5Pg4OxjkOafHLklq1cOIyV8o?usp=sharing">Google Colab</a>
+                </div>
+              </div>-->
 
-            <!-- Forest project -->
-            <div class="col container overlay-holder">
-              <div class="image">
-                <img src="pictures/rfr_toc.png" alt="Random Forest Regression">
-              </div>
-              <div class="text overlay">
-                <h3>Random Forest Regression Template</h3>
-                <span class="badge badge-primary">Machine Learning</span>
-                <p>In this simple Random Tree Regression, we will predict the best days to sell ice cream on based on the temperature outside in order to generate the highest profit.</p>
-                <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1lTdJpaWgKJq07Tp2POBmq38l9E5OPRhu?usp=sharing">Google Colab</a>
-              </div>
-            </div>
+              <!-- Forest project -->
+              <!--<div class="col container overlay-holder">
+                <div class="image">
+                  <img src="pictures/rfr_toc.png" alt="Random Forest Regression">
+                </div>
+                <div class="text overlay">
+                  <h3>Random Forest Regression Template</h3>
+                  <span class="badge badge-primary">Machine Learning</span>
+                  <p>In this simple Random Tree Regression, we will predict the best days to sell ice cream on based on the temperature outside in order to generate the highest profit.</p>
+                  <a class="btn btn-primary-overlay active" role="button" aria-pressed="true" target="_new" href="https://colab.research.google.com/drive/1lTdJpaWgKJq07Tp2POBmq38l9E5OPRhu?usp=sharing">Google Colab</a>
+                </div>
+              </div>-->
 
-          </div>
-        </div>
-      </main>
+            <!--</div>
+          </div>-->
+        </main>
+      </div>
 
       <!-- Footer Section -->
       <footer class="footer mt-4 pt-3">

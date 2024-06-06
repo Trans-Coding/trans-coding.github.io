@@ -40,6 +40,24 @@ h1, h3{
   padding: 0px;
   margin-bottom: 0px !important;
 }
+h4{
+  color: var(--dark);
+}
+a:link, a:visited, a:hover, a:active{
+  color: var(--main-link-color);
+  background-color: transparent;
+  text-decoration: none;
+}
+main {
+  background-color: transparent;
+}
+main .text-holder{
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em 0em;
+  border-radius: 25px;
+  background-color: var(--main-bg-color);
+}
 .section_holder{
   border-top: 5px solid;
   border-color: var(--main-accent-color);
@@ -79,6 +97,7 @@ h1, h3{
   color: var(--main-dark-words);
   background-color: var(--main-accent-color);
   border-color: var(--main-dark-words);
+  margin-top: 1em;
 }
 .content{
   padding: 16px;
@@ -101,6 +120,31 @@ h1, h3{
 }
 .sticky + .content{
   padding-top: 60px;
+}
+.parallax {
+  /* The image used */
+  background-image: url("pictures/mountainsMuted2.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#header_top{
+  background-color: var(--header-bg-color);
+}
+#header_inner{
+  height: 100px;
+  font-size: 24px;
+  text-align: center;
+  color: var(--main-title-words);
+}
+#header_inner a:link, #header_inner a:visited {
+  color: var(--header-link-color);
 }
 #main_navbar{
   overflow: hidden;

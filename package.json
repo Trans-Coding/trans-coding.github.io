@@ -1,0 +1,19 @@
+{
+  "name": "trans-coding.github.io",
+  "version": "1.0.0",
+  "description": "Resume and Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trans-Coding/trans-coding.github.io.git"
+  },
+  "author": "Jade Selke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Trans-Coding/trans-coding.github.io/issues"
+  },
+  "homepage": "https://github.com/Trans-Coding/trans-coding.github.io#readme"
+}
